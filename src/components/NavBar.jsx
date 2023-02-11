@@ -1,7 +1,8 @@
 import CartWidget from "./CartWidget";
 
 
-const NavBar = () => {
+const NavBar = ({titulo}) => {
+
   return (
 <>   
 
@@ -11,7 +12,7 @@ const NavBar = () => {
         <div class="row">
 
             <div class="col-md-4 d-flex ">
-                <h1 class="h1-pag d-flex position-absolute top-50 start-0 translate-middle-y  ">BOOKS STORE</h1>
+                <h1 class="h1-pag d-flex position-absolute top-50 start-0 translate-middle-y  ">{titulo}</h1>
             </div>
             <div class="col-md-4 d-flexl ">
                 <div class="dropdown d-flex position-absolute top-50 start-50 translate-middle ">
@@ -27,10 +28,7 @@ const NavBar = () => {
             </div>
             <div class="col-md-4 d-flex ">
                 <ul class="nav nav-pills position-absolute top-50 end-0 translate-middle-y ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">CART <span>4</span></a>
-                        
-                    </li>
+                <CartWidget/>
                 </ul>
 
 
@@ -42,7 +40,7 @@ const NavBar = () => {
     
     
     </div>
-    <CartWidget/>
+    
 /</>
     
 
